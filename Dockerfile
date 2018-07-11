@@ -9,7 +9,7 @@ RUN mkdir -p $SUPERVISOR_CONF_DIR
 RUN mkdir -p /var/log/supervisor
 
 COPY ./docker/supervisord.conf /etc/supervisord.conf
-COPY ./docker/supervisor.d /etc
+COPY ./docker/supervisor.d/* /etc/supervisor.d
 
 VOLUME $SUPERVISOR_CONF_DIR
 
