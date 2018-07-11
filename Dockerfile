@@ -6,6 +6,7 @@ ENV SUPERVISOR_CONF_FILE=/etc/supervisord.conf
 RUN apk add --update --no-cache supervisor
 
 RUN mkdir -p $SUPERVISOR_CONF_DIR
+RUN mkdir -p /var/log/supervisor
 
 COPY ./docker/supervisord.conf /etc/supervisord.conf
 COPY ./docker/supervisor.d /etc
