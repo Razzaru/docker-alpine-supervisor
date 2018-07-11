@@ -7,8 +7,8 @@ RUN apk add --update --no-cache supervisor
 
 RUN mkdir -p $SUPERVISOR_CONF_DIR
 
-COPY docker/supervisord.conf /etc/supervisord.conf
-COPY docker/supervisor.d /etc
+COPY ./docker/supervisord.conf /etc/supervisord.conf
+COPY ./docker/supervisor.d /etc
 
 VOLUME $SUPERVISOR_CONF_DIR
 
